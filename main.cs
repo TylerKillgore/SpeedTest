@@ -26,7 +26,22 @@ namespace SpeedTest
             }
             if (speedLimit < usersSpeed)
             {
-                foreach(usersSpeed)
+                int differenceInSpeed = new int();
+                int points = new int();
+                differenceInSpeed = usersSpeed-speedLimit;
+                points = differenceInSpeed / 5;
+                
+                if(points > 12)
+                {
+                    Console.WriteLine("License Suspended.");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("You now have " + points + " demerit points.");
+                    Console.ReadLine();
+                }
+
             }
         }
     }
